@@ -48,7 +48,6 @@ class TestModelMapper {
 		// convert to entity
 		Movie movieEntity = modelMapper.map(movieDto, Movie.class);
 		// is it ok
-		System.out.println(movieEntity);
 		assertEquals(movieDto.getId(), movieEntity.getId());
 		assertEquals(movieDto.getTitle(), movieEntity.getTitle());
 		assertEquals(movieDto.getYear(), movieEntity.getYear());
@@ -69,7 +68,6 @@ class TestModelMapper {
 		// update entity with dto
 		modelMapper.map(movieDto, movieEntity);
 		// is it ok
-		System.out.println(movieEntity);
 		assertEquals(movieDto.getId(), movieEntity.getId());
 		assertEquals(movieDto.getTitle(), movieEntity.getTitle());
 		assertEquals(movieDto.getYear(), movieEntity.getYear());
@@ -92,7 +90,7 @@ class TestModelMapper {
 					// HashSet::new
 					() -> new TreeSet<>(Comparator.comparing(MovieSimple::getTitle))
 					));
-		System.out.println(res);
+		// TODO : asserts
 		
 	}
 

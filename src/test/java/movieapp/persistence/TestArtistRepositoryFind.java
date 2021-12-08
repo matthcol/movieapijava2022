@@ -93,9 +93,6 @@ public class TestArtistRepositoryFind {
 		String name = "Steve McQueen";
 		var artists = artistRepository.findByNameIgnoreCase(name);
 		System.out.println(artists);
-//		for (var a: artists) {
-//			assertEquals(name, a.getName());
-//		}
 		assertAll(artists.stream()
 			.map(a -> () -> assertEquals(name, a.getName())));
 	}
@@ -105,7 +102,6 @@ public class TestArtistRepositoryFind {
 		String name = "mcqueen";
 		var artists = artistRepository.findByNameEndingWithIgnoreCase(name);
 		assertAll(artists
-				// .map(a -> {System.out.println(a); return a;})
 				.map(a -> () -> assertTrue(
 						a.getName().toLowerCase().endsWith(name))));
 	}
