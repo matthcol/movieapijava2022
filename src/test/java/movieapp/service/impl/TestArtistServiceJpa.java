@@ -108,6 +108,11 @@ class TestArtistServiceJpa {
 		assertEquals(name, artistSimpleDtoOut.getName()); 
 		assertEquals(birthdate, artistSimpleDtoOut.getBirthdate());
 	}
+	
+	@Test
+	void testGetByName() {
+		fail("Not Implemented yet");
+	}
 }
 
 
