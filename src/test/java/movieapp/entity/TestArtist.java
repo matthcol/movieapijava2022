@@ -20,8 +20,8 @@ class TestArtist {
 				new Artist("Steve McQueen", LocalDate.of(1969, 10, 9)),
 				new Artist("Alfred Hitchcock"),
 				new Artist());
-		System.out.println(artists);
-		
+		// System.out.println(artists);
+		// TODO
 	}
 
 }
